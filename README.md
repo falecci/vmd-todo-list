@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/91849c25-a8e0-4ca2-bad5-7aecb802b6f3/deploy-status)](https://app.netlify.com/sites/falecci-viemed-app/deploys)
+
 # VieMed App
 
 This app was made by Federico Alecci. The app was built with [Snowpack](https://www.snowpack.dev/) (what was the fun of using Webpack :D?), [TailwindCSS](tailwindcss.com/), [React](https://reactjs.org/) and [Apollo Client](https://www.apollographql.com/docs/react/).
@@ -15,6 +17,7 @@ This app was made by Federico Alecci. The app was built with [Snowpack](https://
   - [Testing](#testing)
   - [Building the application](#building-the-application)
   - [Docker](#docker)
+  - [CI/CD](#cicd)
   - [Considerations and assumptions](#considerations-and-assumptions)
 
 ## Requirements
@@ -71,6 +74,10 @@ That script builds a static copy of your site to the `build/` folder, and the ap
 There is a `Dockerfile` available. To use it, just run:
 
 - `docker build -t viemed-app .` and then `docker run -p 3001:3000 viemed-app`.
+
+## CI/CD
+
+Github Actions is configured to lint and run tests on pull requests to `main` branch and deploy to [Netlify](https://www.netlify.com/) on pushes to `main` branch.
 
 ## Considerations and assumptions
 
