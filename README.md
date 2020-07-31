@@ -85,7 +85,7 @@ Github Actions is configured to lint and run tests on pull requests to `main` br
 - I consider the app is small enough to add Redux or another global state management tool. Should this scale, we should reconsider these decisions.
 - **For the best production performance:** Add a build bundler plugin like "@snowpack/plugin-webpack" or "@snowpack/plugin-parcel" to your `snowpack.config.json` config file. Right now, it's totally acceptable.
 - Offline mode for the app is out of the scope.
-- Due to lack of time, it doesn't have optimistic updates.
+- ~~Due to lack of time, it doesn't have optimistic updates.~~
 - `note` field is missing from the app. I don't think this is crucial because it wouldn't have changed a lot.
 - Unit tests were created for basic components with RTL, and E2E tests with Cypress JS. 
 - AccessToken is stored in LocalStorage. Cookies would be more secure, but this is a rather simple app.
