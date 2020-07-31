@@ -1,0 +1,58 @@
+{
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "test": "jest",
+    "test:e2e": "cypress run --headless",
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "lint": "cross-env NODE_ENV=production ./node_modules/.bin/eslint src --ext=.js,.jsx"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.1.1",
+    "classnames": "^2.2.6",
+    "graphql": "^15.3.0",
+    "jwt-decode": "^2.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "tailwindcss": "^1.6.0"
+  },
+  "devDependencies": {
+    "@snowpack/app-scripts-react": "^1.6.0-alpha.0",
+    "@testing-library/cypress": "^6.0.0",
+    "@testing-library/dom": "^7.21.6",
+    "@testing-library/jest-dom": "^5.5.0",
+    "@testing-library/react": "^10.0.3",
+    "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.2",
+    "cypress": "^4.11.0",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-cypress": "^2.11.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.20.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.5",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "husky": "^4.2.5",
+    "jest": "^25.4.0",
+    "lint-staged": "^10.2.11",
+    "postcss": "^7.0.32",
+    "postcss-cli": "^7.1.1",
+    "prettier": "^2.0.5",
+    "snowpack": "^2.6.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn lint && yarn test"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "prettier --write"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "extends": "@snowpack/app-scripts-react",
+  "scripts": {
+    "run:check-env-vars": "node checkEnv.js",
+    "build:css": "postcss"
+  },
+  "plugins": [
+    "@snowpack/plugin-dotenv"
+  ],
+  "devOptions": {
+    "port": 3000
+  }
+}
